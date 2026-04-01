@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fundo Degradado -->
+    <item>
+        <shape>
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="#051018"
+                android:endColor="#0a2a3a"/>
+        </shape>
+    </item>
+
+    <!-- Padrão decorativo (linhas sutis) -->
+    <item>
+        <shape>
+            <stroke
+                android:width="1dp"
+                android:color="#0f3a4a"/>
+        </shape>
+    </item>
+</layer-list>
+

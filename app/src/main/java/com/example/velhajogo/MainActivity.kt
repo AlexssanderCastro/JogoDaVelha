@@ -6,14 +6,14 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var buttons: Array<Button>
     private lateinit var tvStatus: TextView
-    private lateinit var tvScore: TextView
+    private lateinit var tvScoreX: TextView
+    private lateinit var tvScoreO: TextView
+    private lateinit var tvScoreDraw: TextView
 
     private var currentPlayer = "X"
     private var board = Array(9) { "" }
@@ -29,7 +29,9 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         tvStatus = findViewById(R.id.tvStatus)
-        tvScore = findViewById(R.id.tvScore)
+        tvScoreX = findViewById(R.id.tvScoreX)
+        tvScoreO = findViewById(R.id.tvScoreO)
+        tvScoreDraw = findViewById(R.id.tvScoreDraw)
 
         buttons = arrayOf(
             findViewById(R.id.b0),
@@ -51,6 +53,8 @@ class MainActivity : AppCompatActivity() {
             resetGame()
         }
 
+        // Inicializar status corretamente
+        tvStatus.text = getString(R.string.status_player_turn, currentPlayer)
 
     }
 
@@ -70,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         val winner = checkWinner()
 
         if (winner != null) {
-            tvStatus.text = "Jogador $winner venceu!"
+            tvStatus.text = getString(R.string.status_player_won, winner)
             gameActive = false
 
             if (winner == "X") scoreX++ else scoreO++
@@ -79,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (!board.contains("")) {
-            tvStatus.text = "Deu Velha!"
+            tvStatus.text = getString(R.string.status_draw)
             draws++
             updateScore()
             gameActive = false
@@ -87,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         currentPlayer = if (currentPlayer == "X") "O" else "X"
-        tvStatus.text = "Vez do jogador $currentPlayer"
+        tvStatus.text = getString(R.string.status_player_turn, currentPlayer)
     }
 
     private fun checkWinner(): String? {
@@ -122,7 +126,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateScore() {
-        tvScore.text = "X: $scoreX | O: $scoreO | Velhas: $draws"
+        tvScoreX.text = scoreX.toString()
+        tvScoreO.text = scoreO.toString()
+        tvScoreDraw.text = draws.toString()
     }
 
     private fun resetGame() {
@@ -130,7 +136,7 @@ class MainActivity : AppCompatActivity() {
         currentPlayer = "X"
         gameActive = true
 
-        tvStatus.text = "Vez do jogador X"
+        tvStatus.text = getString(R.string.status_player_turn, "X")
 
         buttons.forEach {
             it.text = ""

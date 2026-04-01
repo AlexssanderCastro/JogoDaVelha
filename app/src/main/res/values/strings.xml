@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">VelhaJogo</string>
+
+    <!-- Status Messages -->
+    <string name="status_player_turn">Vez do jogador %1$s</string>
+    <string name="status_initial">Vez do jogador X</string>
+    <string name="status_player_won">Jogador %1$s venceu!</string>
+    <string name="status_draw">Deu Velha!</string>
+
+    <!-- Button Labels -->
+    <string name="btn_reset">Reiniciar Jogo</string>
+
+    <!-- Score Board Labels -->
+    <string name="score_label_x">X</string>
+    <string name="score_label_o">O</string>
+    <string name="score_label_draw">🤝</string>
+
+    <!-- Initial Values -->
+    <string name="score_initial">0</string>
 </resources>
