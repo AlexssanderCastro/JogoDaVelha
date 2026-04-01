@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:text="Vez do jogador X"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:rowCount="3"
+            android:columnCount="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- 9 Botões -->
+            <!-- Use tags para identificar posição -->
+
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/b0" style="@style/cell"/>
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/b1" style="@style/cell"/>
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/b2" style="@style/cell"/>
+
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/b3" style="@style/cell"/>
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/b4" style="@style/cell"/>
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/b5" style="@style/cell"/>
+
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/b6" style="@style/cell"/>
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/b7" style="@style/cell"/>
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/b8" style="@style/cell"/>
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:text="X: 0 |  O: 0  |  Empates: 0"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnReset"
+            android:text="Reiniciar Jogo"
+            android:textColor="#FFD700"
+            android:textStyle="bold"
+            android:background="@drawable/btn_reset_background"
+            app:backgroundTint="@null"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
