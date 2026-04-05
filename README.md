@@ -4,7 +4,6 @@
 
 [![Android](https://img.shields.io/badge/Android-14+-3DDC84?logo=android&logoColor=white)](https://www.android.com/)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9+-7F52FF?logo=kotlin&logoColor=white)](https://kotlinlang.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 **A simple and fun Tic-Tac-Toe game for Android** 🎯
 
@@ -78,19 +77,6 @@ Or download as ZIP and extract it.
 
 4. 🎮 Launch the app from your device launcher
 
-### 📁 Project Structure
-
-| Path | Description |
-|------|-------------|
-| `app/src/main/res/layout/activity_main.xml` | 🎨 Main UI layout |
-| `app/src/main/java/com/example/velhajogo/MainActivity.kt` | 🎮 Game logic & mechanics |
-| `app/src/main/res/drawable/` | 🖼️ Styles & visual assets |
-| `app/build.gradle.kts` | ⚙️ Project configuration |
-
-**Package Name:** `com.example.velhajogo`
-
----
-
 ## 🇧🇷 Português
 
 ### 📱 Visão geral
@@ -155,45 +141,6 @@ Ou baixe como ZIP e extraia.
 
 4. 🎮 Inicie o app pela tela inicial do dispositivo
 
-### 📁 Estrutura do Projeto
-
-| Caminho | Descrição |
-|---------|-----------|
-| `app/src/main/res/layout/activity_main.xml` | 🎨 Layout principal da UI |
-| `app/src/main/java/com/example/velhajogo/MainActivity.kt` | 🎮 Lógica e mecânicas do jogo |
-| `app/src/main/res/drawable/` | 🖼️ Estilos e ativos visuais |
-| `app/build.gradle.kts` | ⚙️ Configuração do projeto |
-
-**Nome do Pacote:** `com.example.velhajogo`
-
----
-
-## 🎓 Stack Tecnológico
-
-```
-┌─────────────────────────────┐
-│   VelhaJogo App             │
-├─────────────────────────────┤
-│  • Kotlin                   │
-│  • Android SDK 36           │
-│  • AndroidX                 │
-│  • ConstraintLayout         │
-│  • AppCompat                │
-└─────────────────────────────┘
-```
-
----
-
-## 💡 Gameplay Quick Guide
-
-| Ação | Resultado |
-|------|-----------|
-| 🖱️ Toque em uma célula | Marca com X ou O |
-| 🏁 Três seguidas | Jogador venceu! |
-| 📊 Sem espaço | Empatou (Deu Velha!) |
-| 🔄 Botão Reiniciar | Nova partida (placar mantido) |
-
----
 
 <div align="center">
 
